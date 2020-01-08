@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Products from "./components/Products/Products";
 import Scan from "./components/Ia/Scan/Scan";
+import Pay from "./components/Ia/Pay/Pay";
 
 const App = () => {
   return (
@@ -22,6 +23,9 @@ const App = () => {
           </ul>
         </nav>
         <Switch>
+          <Router path="/pay">
+            <Pay />
+          </Router>
           <Route path="/ia">
             <Scan />
           </Route>

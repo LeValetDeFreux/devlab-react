@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Camera from "react-html5-camera-photo";
 import "react-html5-camera-photo/build/css/index.css";
 
@@ -56,6 +57,7 @@ const Scan = () => {
       tot += Number(ele[2]);
     });
     setTotal(tot);
+    sessionStorage.setItem("total", tot);
   }, [prod]);
 
   return (
@@ -77,6 +79,7 @@ const Scan = () => {
           );
         })}
       </section>
+      <Link to="/pay">Payer</Link>
     </section>
   );
 };
